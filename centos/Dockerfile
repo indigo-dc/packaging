@@ -22,10 +22,6 @@ RUN sed -i '/root\tALL=/a jenkins ALL=(ALL) NOPASSWD: ALL' /etc/sudoers
 COPY build_env.txt /tmp/ 
 RUN xargs yum -y install < /tmp/build_env.txt
 
-
-#RUN yum -y install git cmake bash bzip2 coreutils cpio diffutils gawk gcc gcc-c++ 
-#RUN yum -y install grep gzip info make patch redhat-rpm-config rpm-build sed shadow-utils tar unzip util-linux which xz
-
 EXPOSE 22 
 
 CMD ["/usr/sbin/sshd", "-D"]
