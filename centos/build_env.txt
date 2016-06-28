@@ -3,6 +3,7 @@ cmake
 bash
 bzip2
 coreutils
+createrepo
 cpio
 diffutils
 gawk
